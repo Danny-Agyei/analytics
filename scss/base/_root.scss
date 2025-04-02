@@ -1,0 +1,30 @@
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixin" as *;
+
+:root {
+  // Container 
+  --container-width: calc(100% - 4rem);
+
+  @include mediaQuery(mobile) {
+    --container-width: 54rem;
+  }
+
+  @include mediaQuery(tablet) {
+    --container-width: calc(100% - 4rem);
+  }
+
+  @include mediaQuery(tablet-landscape) {
+    --container-width: 94rem;
+  }
+
+  // Font sizes
+  @each $size-key, $size-value in $font-sizes-map {
+    --fs-#{$size-key}: #{$size-value};
+
+    @include mediaQuery(tablet-landscape) {
+      --fs-800: 5rem;
+      --fs-700: 4rem;
+      --fs-200: 1.8rem;
+    }
+  }
+}

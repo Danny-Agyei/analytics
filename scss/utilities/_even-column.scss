@@ -1,0 +1,17 @@
+@use '../abstracts' as *;
+
+.u-even-column {
+    display: flex;
+    flex-direction: column;
+
+    @include mediaQuery(tablet) {
+        align-items: center;
+        flex-direction: row;
+        gap: $size-10x;
+
+        &> :nth-child(-n+ 2) {
+            flex: 50%;
+            width: 50%;
+        }
+    }
+}

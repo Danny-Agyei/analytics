@@ -1,0 +1,27 @@
+$ff-primary: "Roboto", sans-serif;
+
+$font-sizes-map: (
+  "900": 6rem,
+  "800": 3.1rem,
+  "700": 3rem,
+  "600": 3rem,
+  "500": 2.5rem,
+  "400": 1.8rem,
+  "300": 1.6rem,
+  "200": 1.4rem,
+  "100": 1.4rem,
+);
+
+$fw-bold: 700;
+
+$fs-heading-lg: var(--fs-800);
+$fs-heading-md: var(--fs-700);
+$fs-sub-heading: var(--fs-600);
+$fs-title-lg: var(--fs-900);
+$fs-title-lg: var(--fs-900);
+$fs-title-sm: var(--fs-500);
+$fs-lead: var(--fs-400);
+$fs-body: var(--fs-200);
+$fs-body-sm: var(--fs-100);
+$fs-button: var(--fs-300);
+$fs-base: 0.625rem;

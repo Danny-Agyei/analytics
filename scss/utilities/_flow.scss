@@ -1,0 +1,7 @@
+@use "../abstracts/sizes" as *;
+
+.u-flow {
+  & > :first-child {
+    margin-block-end: $size-5x;
+  }
+}

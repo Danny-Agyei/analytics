@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "sass:math";
+@use "breakpoints" as *;
+
+@mixin mediaQuery($size-name) {
+  @if map.has-key($breakpoints, $size-name) {
+    $width: map.get($breakpoints, $size-name);
+
+    @if math.is-unitless($width) {
+      @error '#{$width} needs to include a unit [px, rem, em, %, etc]';
+    }
+
+    @else {
+      @media screen and (min-width: $width) {
+        @content;
+      }
+    }
+  }
+
+  @else {
+    @error '$breakpoints has no key #{$size-name}';
+  }
+}

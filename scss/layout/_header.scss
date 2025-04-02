@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+
+.site-header {
+  background-color: $color-brand-secondary-dark;
+  box-shadow: $header-shadow;
+  left: 0;
+  padding-block: $size-5x;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  &__container {
+    align-items: center;
+    display: grid;
+    gap: $size-2x;
+    grid-template-columns: 1fr $size-15x $size-7x;
+  }
+
+  &__brand {
+    width: 17rem;
+  }
+
+  &__btn--signup {
+    display: none;
+  }
+}
+
+.nav {
+  height: max-content;
+  width: max-content;
+
+  &__menu {
+    background-color: $color-brand-secondary-dark;
+    height: 0;
+    left: 0;
+    overflow: hidden;
+    padding-inline: $size-5x;
+    position: fixed;
+    top: $size-18x;
+    transition: all 0.35s ease;
+    width: 100%;
+
+    &.has-expanded {
+      height: auto;
+      z-index: -1;
+      padding-block: $size-6x;
+
+      .nav__list {
+        display: flex;
+      }
+    }
+  }
+
+  &__list {
+    display: none;
+    font-size: $fs-lead;
+    font-weight: $fw-bold;
+    flex-direction: column;
+    gap: $size-6x 0;
+
+    &> :where(:not(:last-child)) {
+      border-bottom: 0.1rem solid $color-brand-secondary-light;
+      padding-block-end: $size-6x;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $color-neutral-100;
+    }
+  }
+
+  &__btn {
+    margin-block-start: $size-10x;
+  }
+
+  &__toggler {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+
+  &__hamburger {
+    display: block;
+    width: $size-7x;
+    height: 0.3rem;
+    background-color: $color-brand-secondary-light;
+    border-radius: $size-1x;
+  }
+}

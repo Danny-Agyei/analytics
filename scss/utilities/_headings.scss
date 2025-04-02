@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+.u-heading-primary {
+    color: $color-neutral-100;
+    font-size: $fs-heading-lg;
+
+    @include mediaQuery(tablet) {
+        max-width: 19ch;
+    }
+}
+
+.u-heading-secondary {
+    color: $color-brand-secondary-dark;
+    font-size: $fs-heading-md;
+    max-width: 22ch;
+}
+
+.u-sub-heading {
+    color: $color-brand-secondary-dark;
+    font-size: $fs-sub-heading;
+}
+
+.u-title,
+.u-sub-heading {
+    font-weight: $fw-bold;
+    line-height: 1;
+}
+
+.u-title {
+    color: $color-brand-secondary-dark;
+    font-size: $fs-title-sm;
+}
+
+.u-heading-primary,
+.u-heading-secondary {
+    font-weight: $fw-bold;
+    line-height: 1.2;
+}

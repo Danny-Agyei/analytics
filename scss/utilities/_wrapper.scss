@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+@use '../abstracts/sizes' as *;
+
+.u-wrapper {
+    --wrapper-padding-block: 7.2rem;
+
+    $wrapper-padding-block: var(--wrapper-padding-block);
+
+    padding-block-start: $wrapper-padding-block;
+
+    @include mediaQuery(tablet) {
+        --wrapper-padding-block: 8rem;
+    }
+}

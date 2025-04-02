@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+
+.btn {
+  border-radius: 99.9rem;
+  display: inline-block;
+  font-size: $fs-button;
+  line-height: 1;
+  text-align: center;
+  transition: all 0.35s ease-in-out;
+}
+
+.btn--full {
+  padding: $size-4x $size-20x;
+  width: 100%;
+}
+
+.btn--lg {
+  padding: $size-4x $size-20x;
+}
+
+.btn--primary {
+  background-color: $color-brand-primary;
+  color: $color-neutral-100;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn--secondary {
+  color: $color-brand-secondary-light;
+
+  &:hover {
+    color: $color-neutral-100;
+  }
+}
+
+.btn--secondary-outline {
+  border: 0.1rem solid $color-brand-secondary-med;
+  color: $color-brand-secondary-light;
+
+  &:hover {
+    background-color: $color-brand-primary;
+    border-color: $color-brand-primary;
+    color: $color-neutral-100;
+  }
+}

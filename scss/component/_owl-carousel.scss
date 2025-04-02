@@ -1,0 +1,9 @@
+@use '../abstracts/sizes' as *;
+@use '../abstracts/mixin' as *;
+
+.owl-carousel .owl-stage {
+
+    @include mediaQuery(tablet) {
+        padding-block: $size-5x;
+    }
+}

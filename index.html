@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/images/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Analytics" />
+    <link rel="manifest" href="./assets/images/site.webmanifest" />
+
+    <title>Analytics | Monitor your business on real-time dashboard</title>
+
+    <link rel="stylesheet" href="./dist/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./dist/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+  </head>
+
+  <body>
+    <!-- Header  -->
+    <header class="site-header">
+      <div class="site-header__container l-container">
+        <a href="#">
+          <img
+            src="./assets/images/logo-primary.png"
+            alt="Analytics Home"
+            class="site-header__brand"
+            width="168"
+            height="40"
+          />
+        </a>
+
+        <div class="site-header__account">
+          <a
+            href="#"
+            class="site-header__btn site-header__btn--signin btn btn--secondary"
+            >Sign In</a
+          >
+          <a
+            href="#"
+            class="site-header__btn site-header__btn--signup btn btn--lg btn--secondary-outline"
+            >Sign Up</a
+          >
+        </div>
+
+        <nav class="nav" id="nav-main" aria-label="Main">
+          <div class="nav__menu u-text-center" id="js-nav-menu">
+            <ul class="nav__list u-flex-group" aria-label="Primary">
+              <li><a href="#products" class="nav__link">Products</a></li>
+              <li><a href="#pricing" class="nav__link">Pricing</a></li>
+              <li><a href="#faq" class="nav__link">FAQ</a></li>
+              <li><a href="#blog" class="nav__link">Blog</a></li>
+              <li><a href="#contact" class="nav__link">Contact Us</a></li>
+            </ul>
+
+            <a href="#" class="nav__btn btn btn--lg btn--primary">Sign Up</a>
+          </div>
+
+          <button
+            id="js-nav-menu-trigger"
+            class="btn nav__toggler"
+            aria-label="Toggle Main Navigation"
+            aria-controls="nav-main"
+            aria-expanded="false"
+          >
+            <span class="nav__hamburger nav__hamburger--top"></span>
+            <span class="nav__hamburger nav__hamburger--middle"></span>
+            <span class="nav__hamburger nav__hamburger--bottom"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="l-container hero__container">
+          <div class="hero__wrapper">
+            <picture class="hero__image-wrapper">
+              <source
+                srcset="./assets/images/dashboard-desktop-image.png"
+                type="image/png"
+                media="(min-width:768px)"
+              />
+              <source
+                srcset="./assets/images/dashboard-tablet-image.png"
+                type="image/png"
+                media="(min-width:601px)"
+              />
+              <source
+                srcset="./assets/images/dashboard-mobile-image.png"
+                type="image/png"
+                media="(max-width:600px)"
+              />
+              <img
+                src="./assets/images/dashboard-mobile.png"
+                alt="Analytics Dashboard"
+                width="365"
+                height="262"
+                class="hero__image"
+                loading="eager"
+              />
+            </picture>
+
+            <div class="hero__content">
+              <h1 class="u-heading-primary hero__heading">
+                Monitor your business on real-time dashboard
+              </h1>
+              <p class="hero__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Elementum nisi aliquet volutpat pellentesque volutpat est.
+              </p>
+              <a href="#" class="hero__btn btn btn--full btn--primary"
+                >Try for free</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features  -->
+      <section class="features">
+        <div class="l-container">
+          <div class="u-wrapper">
+            <div class="u-flow">
+              <h2 class="u-heading-secondary features__heading">
+                Main Features
+              </h2>
+              <p class="features__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Elementum nisi aliquet volutpat pellentesque volutpat est.
+                Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.
+                Vitae et, tortor pulvinar risus pulvinar sit amet. Id vel in nam
+                malesuada.
+              </p>
+            </div>
+            <ul class="features__list u-flex-group">
+              <li class="features__item u-flex-group">
+                <img
+                  src="./assets/images/icon-timer.png"
+                  alt=""
+                  width="61"
+                  height="60"
+                  class="features__icon"
+                />
+                <div class="features__item-content">
+                  <h3 class="features__title">Monitoring</h3>
+                  <p class="features__item-text">
+                    24/7 Lorem ipsum dolor sit amet, conse ctetur adipis cing
+                    elit. Elementum nisi aliquet volutpat.
+                  </p>
+                </div>
+              </li>
+              <li class="features__item u-flex-group">
+                <img
+                  src="./assets/images/icon-monitor.png"
+                  alt=""
+                  width="61"
+                  height="60"
+                  class="features__icon"
+                />
+                <div class="features__item-content">
+                  <h3 class="features__title">Widget System</h3>
+                  <p class="features__item-text">
+                    Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.
+                    Vitae et, tortor pulvinar risus pulvinar.
+                  </p>
+                </div>
+              </li>
+              <li class="features__item u-flex-group">
+                <img
+                  src="./assets/images/icon-rocket.png"
+                  alt=""
+                  width="61"
+                  height="60"
+                  class="features__icon"
+                />
+                <div class="features__item-content">
+                  <h3 class="features__title">Best Performance</h3>
+                  <p class="features__item-text">
+                    Lorem ipsum dolor sit amet, consectetur adipis cing elit.
+                    Elementum nisi aliquet volutpat.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Us  -->
+      <section class="why-us">
+        <div class="l-container">
+          <div class="u-wrapper">
+            <div class="why-us__card u-even-column">
+              <div class="why-us__content u-flow">
+                <h2 class="why-us__heading u-heading-secondary">
+                  Automated Reports & Widget Alerts
+                </h2>
+                <p class="why-us__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Elementum nisi aliquet volutpat pellentesque volutpat est.
+                  Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.
+                  Vitae et, tortor pulvinar risus pulvinar sit amet.
+                </p>
+              </div>
+              <img
+                src="./assets/images/reports-widget.png"
+                alt=""
+                class="why-us__image"
+                width="671"
+                height="480"
+              />
+            </div>
+
+            <div class="why-us__card why-us__card--middle u-even-column">
+              <div class="why-us__content u-flow">
+                <h2 class="why-us__heading u-heading-secondary">
+                  Fully customizable to address your needs
+                </h2>
+                <p class="why-us__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Elementum nisi aliquet volutpat pellentesque volutpat est.
+                  Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.
+                  Vitae et, tortor pulvinar risus pulvinar sit amet.
+                </p>
+              </div>
+              <img
+                src="./assets/images/progress-chart.png"
+                alt=""
+                class="why-us__image"
+                width="671"
+                height="480"
+              />
+            </div>
+
+            <div class="why-us__card u-even-column">
+              <div class="why-us__content u-flow">
+                <h2 class="why-us__heading u-heading-secondary">
+                  Pre-built Dashboard Templates
+                </h2>
+                <p class="why-us__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Elementum nisi aliquet volutpat pellentesque volutpat est.
+                  Sapien in etiam vitae nibh nunc mattis imperdiet sed nullam.
+                  Vitae et, tortor pulvinar risus pulvinar sit amet.
+                </p>
+              </div>
+              <img
+                src="./assets/images/calendar.png"
+                alt=""
+                class="why-us__image"
+                width="671"
+                height="480"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="u-wrapper">
+        <div class="l-container-full">
+          <!-- Pricing -->
+          <section class="pricing">
+            <div class="l-container">
+              <h2 class="pricing__heading u-heading-secondary">
+                Pricing Plans
+              </h2>
+              <p class="pricing__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Elementum nisi aliquet volutpat pellentesque volutpat est.
+              </p>
+            </div>
+
+            <div class="pricing__list owl-carousel owl-theme u-text-center">
+              <div
+                class="item pricing__plan pricing__plan--starter u-flex-group"
+              >
+                <h3
+                  class="u-title pricing__sub-heading pricing__sub-heading--light"
+                >
+                  Starter
+                </h3>
+                <p class="pricing__label">up to 3 users</p>
+                <hr class="pricing__divider" />
+                <h4
+                  class="pricing__per-month pricing__per-month--light u-flex-group"
+                >
+                  <span
+                    class="pricing__symbol pricing__symbol--light u-sub-heading"
+                    >$</span
+                  >
+                  <span>29</span>
+                </h4>
+                <p class="pricing__label">per month</p>
+                <a href="#" class="pricing__btn btn btn--lg btn--primary"
+                  >Order</a
+                >
+              </div>
+              <div
+                class="item pricing__plan pricing__plan--standard u-flex-group"
+              >
+                <h3 class="u-title pricing__sub-heading">Standard</h3>
+                <p class="pricing__label">up to 20 users</p>
+                <hr class="pricing__divider pricing__divider--light" />
+                <h4 class="pricing__per-month u-flex-group">
+                  <span class="pricing__symbol u-sub-heading">$</span>
+                  <span>99</span>
+                </h4>
+                <p class="pricing__label">per month</p>
+                <a href="#" class="pricing__btn btn btn--lg btn--primary"
+                  >Order</a
+                >
+              </div>
+              <div
+                class="item pricing__plan pricing__plan--premium u-flex-group"
+              >
+                <h3
+                  class="u-title pricing__sub-heading pricing__sub-heading--light"
+                >
+                  Premium
+                </h3>
+                <p class="pricing__label">up to 200 users</p>
+                <hr class="pricing__divider" />
+                <h4
+                  class="pricing__per-month pricing__per-month--light u-flex-group"
+                >
+                  <span
+                    class="pricing__symbol pricing__symbol--light u-sub-heading"
+                    >$</span
+                  >
+                  <span>299</span>
+                </h4>
+                <p class="pricing__label">per month</p>
+                <a href="#" class="pricing__btn btn btn--lg btn--primary"
+                  >Order</a
+                >
+              </div>
+            </div>
+          </section>
+
+          <!-- Footer  -->
+          <footer class="footer">
+            <div class="l-container footer__container u-flex-group">
+              <a href="#">
+                <img
+                  src="./assets/images/logo-light.png"
+                  alt="Analytics Home"
+                  class="footer__logo"
+                  width="138"
+                  height="40"
+                />
+              </a>
+
+              <ul class="nav__list footer__nav-list">
+                <li><a href="#products" class="nav__link"></a>Products</li>
+                <li><a href="#pricing" class="nav__link">Pricing</a></li>
+                <li><a href="#faq" class="nav__link">FAQ</a></li>
+                <li><a href="#blog" class="nav__link">Blog</a></li>
+                <li><a href="#contact" class="nav__link">Contact Us</a></li>
+              </ul>
+
+              <div class="footer__social u-flex-group">
+                <a href="#facebook">
+                  <img
+                    src="./assets/images/Facebook.svg"
+                    alt="Analytics Facebook Home"
+                    class="footer__icon footer__icon--facebook"
+                    width="21"
+                    height="20"
+                  />
+                </a>
+                <a href="#facebook">
+                  <img
+                    src="./assets/images/Twitter.svg"
+                    alt="Analytics Twitter Home"
+                    class="footer__icon"
+                    width="21"
+                    height="20"
+                  />
+                </a>
+                <a href="#facebook">
+                  <img
+                    src="./assets/images/Instagram.svg"
+                    alt="Analytics Instagram Home"
+                    class="footer__icon"
+                    width="21"
+                    height="20"
+                  />
+                </a>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </main>
+
+    <!-- JS Scripts  -->
+    <script src="./dist/js/jquery-3.7.1.min.js"></script>
+    <script src="./dist/js/owl.carousel.min.js"></script>
+    <script src="./dist/js/script.js"></script>
+  </body>
+</html>

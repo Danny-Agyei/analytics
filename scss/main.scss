@@ -1,0 +1,13 @@
+// @use "./base/index" as *;
+// @use './utilities/index' as *;
+// @use "./layout/index" as *;
+// @use './components/index' as *;
+// @use "./layout/header" as *;
+// @use "./pages/home";
+// @use "./layout/footer" as *;
+
+@use "base";
+@use "utilities";
+@use "component";
+@use "layout/header";
+@use "pages/home";
