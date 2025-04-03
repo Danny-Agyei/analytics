@@ -35,7 +35,8 @@
   }
 }
 
-.btn--secondary-outline {
+%btn-secondary-style {
+  background-color: transparent;
   border: 0.1rem solid $color-brand-secondary-med;
   color: $color-brand-secondary-light;
 
@@ -43,5 +44,17 @@
     background-color: $color-brand-primary;
     border-color: $color-brand-primary;
     color: $color-neutral-100;
+  }
+}
+
+.btn--secondary-outline {
+  @extend %btn-secondary-style;
+
+  @include mediaQuery(tablet-landscape) {
+
+    &--md {
+
+      // @extend %btn-secondary-style;
+    }
   }
 }

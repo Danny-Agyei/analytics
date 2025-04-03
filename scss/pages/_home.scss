@@ -5,30 +5,52 @@
     background-color: $color-brand-secondary-dark;
     border-bottom: $size-3x solid $color-brand-primary;
 
-    &__container {
-        @include mediaQuery(tablet) {
-            max-width: 100%;
-            padding-inline-start: $size-5x;
-        }
+    @include mediaQuery(tablet-landscape) {
+        position: relative;
     }
 
     &__wrapper {
         display: grid;
-        padding-block: calc($size-25x + 1rem) $size-25x;
         gap: $size-6x;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr repeat(10, 1fr) 1fr;
+        padding-block: calc($size-25x + 1rem) $size-25x;
 
         @include mediaQuery(tablet) {
             align-items: center;
-            grid-template-columns: repeat(12, 1fr);
-            gap: $size-10x;
-            grid-auto-flow: column;
+            gap: $size-15x;
             padding-block-start: $size-31x;
+        }
+
+        @include mediaQuery(tablet-landscape) {
+            padding-block: $size-50x $size-40x;
+        }
+
+        @include mediaQuery(large) {
+            height: 100vh;
         }
     }
 
     &__image-wrapper {
+        grid-column: 1 / -1;
+
         @include mediaQuery(tablet) {
             grid-column: 7 / -1;
+        }
+
+        @include mediaQuery(tablet-landscape) {
+            position: absolute;
+            right: 0;
+            top: 55%;
+            transform: translateY(-55%);
+        }
+
+        @include mediaQuery(desktop) {
+            grid-column: 8 / -1;
+        }
+
+        @include mediaQuery(large) {
+            transform: translateY(-50%);
         }
     }
 
@@ -37,20 +59,42 @@
         width: 100%;
 
         @include mediaQuery(tablet) {
-            transform: scale(1.1);
+            transform: scale(1.15) translateY($size-2x);
+        }
+
+        @include mediaQuery(tablet-landscape) {
+            max-width: 46rem;
+        }
+
+        @include mediaQuery(large) {
+            max-width: 58rem;
+        }
+
+        @include mediaQuery(huge) {
+            max-width: 65rem;
         }
     }
 
     &__content {
+        grid-column: 1 / -1;
+
         @include mediaQuery(tablet) {
             grid-column: 1 / 7;
-            padding-right: $size-6x;
+        }
+
+        @include mediaQuery(desktop) {
+            grid-column: 1 / 8;
         }
     }
 
     &__description {
         font-size: $fs-lead;
         margin-block: $size-4x $size-6x;
+        max-width: 50rem;
+
+        @include mediaQuery(tablet-landscape) {
+            margin-block: $size-5x $size-12x;
+        }
     }
 
     &__btn {
@@ -97,7 +141,12 @@
         @include mediaQuery(tablet) {
             flex-direction: column;
         }
+
+        &-text {
+            font-size: $fs-body-md;
+        }
     }
+
 
     &__icon {
         width: $size-15x;
@@ -108,6 +157,7 @@
         font-weight: $fw-bold;
         color: $color-brand-secondary-dark;
     }
+
 }
 
 // Why Us
@@ -205,13 +255,9 @@
         border-top: 0.1rem solid $color-neutral-250;
         margin-block: $size-5x;
 
-        @include mediaQuery(tablet-landscape) {
-            border-color: $color-brand-secondary-light;
-        }
-
-        &--light {
+        &--dark {
             @include mediaQuery(tablet-landscape) {
-                border-color: $color-neutral-100;
+                border-color: $color-brand-secondary-lighter;
             }
         }
     }
