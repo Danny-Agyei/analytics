@@ -28,106 +28,110 @@
   </head>
 
   <body>
-    <!-- Header  -->
-    <header class="site-header">
-      <div class="site-header__container l-container">
-        <a href="#" class="site-header__brand">
-          <img
-            src="./assets/images/logo-primary.png"
-            alt="Analytics Home"
-            class="site-header__brand-logo"
-            width="168"
-            height="40"
-          />
-        </a>
-
-        <div class="site-header__account">
-          <a
-            href="#"
-            class="site-header__btn site-header__btn--signin btn btn--secondary"
-            >Sign In</a
-          >
-          <a
-            href="#"
-            class="site-header__btn site-header__btn--signup btn btn--lg btn--secondary-outline"
-            >Sign Up</a
-          >
-        </div>
-
-        <nav class="nav" id="nav-main" aria-label="Main">
-          <div class="nav__menu u-text-center" id="js-nav-menu">
-            <ul class="nav__list u-flex-group" aria-label="Primary">
-              <li><a href="#products" class="nav__link">Products</a></li>
-              <li><a href="#pricing" class="nav__link">Pricing</a></li>
-              <li><a href="#faq" class="nav__link">FAQ</a></li>
-              <li><a href="#blog" class="nav__link">Blog</a></li>
-              <li><a href="#contact" class="nav__link">Contact Us</a></li>
-            </ul>
-
-            <a href="#" class="nav__btn btn btn--lg btn--primary">Sign Up</a>
-          </div>
-
-          <button
-            id="js-nav-menu-trigger"
-            class="btn nav__toggler"
-            aria-label="Toggle Main Navigation"
-            aria-controls="nav-main"
-            aria-expanded="false"
-          >
-            <span class="nav__hamburger nav__hamburger--top"></span>
-            <span class="nav__hamburger nav__hamburger--middle"></span>
-            <span class="nav__hamburger nav__hamburger--bottom"></span>
-          </button>
-        </nav>
-      </div>
-    </header>
-
     <main>
-      <!-- Hero -->
-      <section class="hero">
-        <div class="l-container hero__container">
-          <div class="hero__wrapper">
-            <picture class="hero__image-wrapper">
-              <source
-                srcset="./assets/images/dashboard-desktop-image.png"
-                type="image/png"
-                media="(min-width:768px)"
-              />
-              <source
-                srcset="./assets/images/dashboard-tablet-image.png"
-                type="image/png"
-                media="(min-width:601px)"
-              />
-              <source
-                srcset="./assets/images/dashboard-mobile-image.png"
-                type="image/png"
-                media="(max-width:600px)"
-              />
+      <div class="l-container-full home-view">
+        <!-- Header  -->
+        <header id="js-site-header" class="site-header">
+          <div class="site-header__container l-container">
+            <a href="#" class="site-header__brand">
               <img
-                src="./assets/images/dashboard-mobile.png"
-                alt="Analytics Dashboard"
-                width="365"
-                height="262"
-                class="hero__image"
-                loading="eager"
+                src="./assets/images/logo-primary.png"
+                alt="Analytics Home"
+                class="site-header__brand-logo"
+                width="168"
+                height="40"
               />
-            </picture>
+            </a>
 
-            <div class="hero__content">
-              <h1 class="u-heading-primary hero__heading">
-                Monitor your business on real-time dashboard
-              </h1>
-              <p class="hero__description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Elementum nisi aliquet volutpat pellentesque volutpat est.
-              </p>
-              <a href="#" class="hero__btn btn btn--full btn--primary"
-                >Try for free</a
+            <div class="site-header__account">
+              <a
+                href="#"
+                class="site-header__btn site-header__btn--signin btn btn--secondary"
+                >Sign In</a
+              >
+              <a
+                href="#"
+                class="site-header__btn site-header__btn--signup btn btn--lg btn--secondary-outline"
+                >Sign Up</a
               >
             </div>
+
+            <nav class="nav" id="nav-main" aria-label="Main">
+              <div class="nav__menu u-text-center" id="js-nav-menu">
+                <ul class="nav__list u-flex-group" aria-label="Primary">
+                  <li><a href="#products" class="nav__link">Products</a></li>
+                  <li><a href="#pricing" class="nav__link">Pricing</a></li>
+                  <li><a href="#faq" class="nav__link">FAQ</a></li>
+                  <li><a href="#blog" class="nav__link">Blog</a></li>
+                  <li><a href="#contact" class="nav__link">Contact Us</a></li>
+                </ul>
+
+                <a href="#" class="nav__btn btn btn--lg btn--primary"
+                  >Sign Up</a
+                >
+              </div>
+
+              <button
+                id="js-nav-menu-trigger"
+                class="btn nav__toggler"
+                aria-label="Toggle Main Navigation"
+                aria-controls="nav-main"
+                aria-expanded="false"
+              >
+                <span class="nav__hamburger nav__hamburger--top"></span>
+                <span class="nav__hamburger nav__hamburger--middle"></span>
+                <span class="nav__hamburger nav__hamburger--bottom"></span>
+              </button>
+            </nav>
           </div>
-        </div>
-      </section>
+        </header>
+
+        <!-- Hero -->
+        <section class="hero">
+          <div class="l-container hero__container">
+            <div class="hero__wrapper">
+              <picture class="hero__image-wrapper">
+                <source
+                  srcset="./assets/images/dashboard-desktop-image.png"
+                  type="image/png"
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="./assets/images/dashboard-tablet-image.png"
+                  type="image/png"
+                  media="(min-width:601px)"
+                />
+                <source
+                  srcset="./assets/images/dashboard-mobile-image.png"
+                  type="image/png"
+                  media="(max-width:600px)"
+                />
+                <img
+                  src="./assets/images/dashboard-mobile.png"
+                  alt="Analytics Dashboard"
+                  width="365"
+                  height="262"
+                  class="hero__image"
+                  loading="eager"
+                />
+              </picture>
+
+              <div class="hero__content">
+                <h1 class="u-heading-primary hero__heading">
+                  Monitor your business on real-time dashboard
+                </h1>
+                <p class="hero__description">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Elementum nisi aliquet volutpat pellentesque volutpat est.
+                </p>
+                <a href="#" class="hero__btn btn btn--full btn--primary"
+                  >Try for free</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <!-- Features  -->
       <section class="features">
@@ -202,7 +206,7 @@
       <!-- Why Us  -->
       <section class="why-us">
         <div class="l-container">
-          <div class="u-wrapper">
+          <div class="why-us__wrapper u-wrapper">
             <div class="why-us__card u-even-column">
               <div class="why-us__content u-flow">
                 <h2 class="why-us__heading u-heading-secondary">

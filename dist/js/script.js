@@ -11,6 +11,18 @@ $(document).ready(function () {
 
     btnNavMenuTrigger.on("click", navMenuToggler);
 
+    function stickyHeader() {
+        const siteHeader = $('#js-site-header');
+
+        const amountScrolled = $(window)[0].pageYOffset;
+
+        if (amountScrolled > 0) {
+            siteHeader.addClass('site-header--sticky')
+        } else {
+            siteHeader.removeClass('site-header--sticky')
+        }
+    }
+
 
     // Pricing carousel 
     const owlOptions = {
@@ -56,8 +68,10 @@ $(document).ready(function () {
         }
     }
 
-
+    stickyHeader()
     initCarousel();
+
     $(window).resize(initCarousel);
+    $(window).on('scroll', stickyHeader);
 
 });

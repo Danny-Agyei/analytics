@@ -11,4 +11,8 @@
     @include mediaQuery(tablet) {
         --wrapper-padding-block: 8rem;
     }
+
+    @include mediaQuery(large) {
+        --wrapper-padding-block: 13rem;
+    }
 }

@@ -1,7 +1,11 @@
-@use "../abstracts/sizes" as *;
+@use "../abstracts" as *;
 
 .u-flow {
-  & > :first-child {
+  &> :first-child {
     margin-block-end: $size-5x;
+
+    @include mediaQuery(large) {
+      margin-block-end: $size-8x;
+    }
   }
 }

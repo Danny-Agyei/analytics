@@ -1,5 +1,12 @@
 @use "../abstracts" as *;
 
+//home
+.home-view {
+    @include mediaQuery(tablet-landscape) {
+        padding-block-start: $size-12x;
+    }
+}
+
 // Hero
 .hero {
     background-color: $color-brand-secondary-dark;
@@ -27,7 +34,8 @@
         }
 
         @include mediaQuery(large) {
-            height: 100vh;
+            min-height: 80vh;
+            padding-block: $size-55x $size-50x;
         }
     }
 
@@ -59,7 +67,7 @@
         width: 100%;
 
         @include mediaQuery(tablet) {
-            transform: scale(1.15) translateY($size-2x);
+            transform: scale(1.15) translateY($size-4x);
         }
 
         @include mediaQuery(tablet-landscape) {
@@ -67,7 +75,7 @@
         }
 
         @include mediaQuery(large) {
-            max-width: 58rem;
+            max-width: 54rem;
         }
 
         @include mediaQuery(huge) {
@@ -132,6 +140,10 @@
         @include mediaQuery(tablet) {
             flex-direction: row;
         }
+
+        @include mediaQuery(large) {
+            margin-block-start: $size-20x;
+        }
     }
 
     &__item {
@@ -162,9 +174,21 @@
 
 // Why Us
 .why-us {
+    @include mediaQuery(large) {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20rem;
+        }
+    }
+
     &__card {
         &--middle {
             margin-block: $size-15x;
+        }
+
+        @include mediaQuery(large) {
+            column-gap: $size-25x;
         }
     }
 
@@ -173,6 +197,10 @@
         border-radius: $radius-sm;
         box-shadow: $card-shadow;
         margin-block-start: $size-8x;
+
+        @include mediaQuery(large) {
+            margin-block-start: 0;
+        }
     }
 }
 
@@ -205,6 +233,10 @@
         @include mediaQuery(tablet) {
             margin-inline: auto;
             max-width: 60ch;
+        }
+
+        @include mediaQuery(large) {
+            margin-block: $size-8x $size-20x;
         }
     }
 
