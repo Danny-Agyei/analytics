@@ -22,7 +22,7 @@
 
 // Hero
 .hero {
-    z-index: 999;
+    z-index: 5;
 
     @include mediaQuery(tablet-landscape) {
         position: relative;
@@ -38,7 +38,6 @@
         @include mediaQuery(tablet) {
             align-items: center;
             gap: $size-15x;
-            // padding-block-start: $size-31x;
             padding-block: $size-31x $size-10x;
         }
 
@@ -83,13 +82,12 @@
         width: 100%;
 
         @include mediaQuery(tablet) {
-            // transform: scale(1.15) translateY($size-4x);
-
-            transform: scale(1.45) translate($size-13x, $size-10x);
+            transform: scale(1.35) translate($size-10x, $size-7x);
         }
 
         @include mediaQuery(tablet-landscape) {
             max-width: 46rem;
+            transform: scale(1.3) translate($size-13x, $size-5x);
         }
 
         @include mediaQuery(large) {
@@ -140,7 +138,11 @@
 
     &__wrapper {
         @include mediaQuery(tablet) {
-            padding-block-start: $size-35x;
+            padding-block-start: $size-31x;
+        }
+
+        @include mediaQuery(tablet-landscape) {
+            padding-block-start: $size-8x;
         }
 
         @include mediaQuery(large) {
@@ -257,6 +259,10 @@
 
     @include mediaQuery(large) {
         padding-block-end: $size-25x;
+    }
+
+    @include mediaQuery(desktop) {
+        margin-block-start: $size-40x;
     }
 
     &__heading {
