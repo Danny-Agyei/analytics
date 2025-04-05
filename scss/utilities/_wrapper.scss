@@ -2,7 +2,7 @@
 @use '../abstracts/sizes' as *;
 
 .u-wrapper {
-    --wrapper-padding-block: 7.2rem;
+    --wrapper-padding-block: 8rem;
 
     $wrapper-padding-block: var(--wrapper-padding-block);
 

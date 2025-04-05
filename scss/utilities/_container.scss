@@ -7,6 +7,23 @@
   margin-inline: auto;
 
   &-full {
-    background-color: $color-brand-secondary-dark;
+
+    &::after,
+    &::before {
+      content: '';
+      left: 0;
+      top: 0;
+      position: absolute;
+      width: 100%;
+      z-index: -1;
+    }
+
+    &::before {
+      height: 50%;
+    }
+
+    &::after {
+      height: 100%;
+    }
   }
 }

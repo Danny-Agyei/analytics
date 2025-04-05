@@ -52,9 +52,16 @@
 
   @include mediaQuery(tablet-landscape) {
 
-    &--md {
+    &-md {
+      background-color: transparent;
+      border: 0.1rem solid $color-brand-secondary-med;
+      color: $color-brand-secondary-light;
 
-      // @extend %btn-secondary-style;
+      &:hover {
+        background-color: $color-brand-primary;
+        border-color: $color-brand-primary;
+        color: $color-neutral-100;
+      }
     }
   }
 }

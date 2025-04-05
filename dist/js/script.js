@@ -46,7 +46,7 @@ $(document).ready(function () {
                 margin: 50,
             },
             800: {
-                items: 2.5,
+                items: 3,
                 margin: 50,
             },
             1140: {
