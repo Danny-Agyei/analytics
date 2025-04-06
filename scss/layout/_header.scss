@@ -78,6 +78,34 @@
     grid-column: 3/9;
   }
 
+  &.has-expanded {
+    .nav__menu {
+      height: auto;
+      z-index: -1;
+      padding-block: $size-6x;
+    }
+
+    .nav__list {
+      display: flex;
+    }
+
+    .nav__hamburger {
+      background: none;
+
+      &::before {
+        top: 0.9rem;
+        transform: rotate(45deg);
+        transition-delay: 0s, 0.25s;
+      }
+
+      &::after {
+        bottom: 0.9rem;
+        transform: rotate(-45deg);
+        transition-delay: 0s, 0.25s;
+      }
+    }
+  }
+
   &__menu {
     background-color: $color-brand-secondary-dark;
     height: 0;
@@ -88,16 +116,6 @@
     top: $size-18x;
     transition: all 0.35s ease;
     width: 100%;
-
-    &.has-expanded {
-      height: auto;
-      z-index: -1;
-      padding-block: $size-6x;
-
-      .nav__list {
-        display: flex;
-      }
-    }
 
     @include mediaQuery(tablet-landscape) {
       background-color: transparent;
@@ -165,11 +183,15 @@
   }
 
   &__toggler {
-    padding: 0;
+    align-items: center;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    justify-content: space-between;
+    height: $size-5x;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+
 
     @include mediaQuery(tablet-landscape) {
       display: none;
@@ -177,10 +199,35 @@
   }
 
   &__hamburger {
-    display: block;
-    width: $size-7x;
-    height: 0.3rem;
-    background-color: $color-brand-secondary-light;
+    background: $color-brand-secondary-light;
     border-radius: $size-1x;
+    display: block;
+    height: 0.2rem;
+    transition: background 0.25s;
+    width: 2.5rem;
+
+    &::before,
+    &::after {
+      background: $color-brand-secondary-light;
+      content: '';
+      display: block;
+      height: 0.2rem;
+      left: 0;
+      position: absolute;
+      transform: rotate(0deg);
+      transition-delay: 0.25s, 0s;
+      transition-duration: 0.25s, 0.25s;
+      width: 100%;
+    }
+
+    &::before {
+      top: 0.2rem;
+      transition-property: top, transform;
+    }
+
+    &::after {
+      bottom: 0.2rem;
+      transition-property: bottom, transform;
+    }
   }
 }

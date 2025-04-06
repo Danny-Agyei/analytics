@@ -21,7 +21,7 @@
 :root {
   --container-width: calc(100% - 4rem);
   --fs-900: 6rem;
-  --fs-800: 3.1rem;
+  --fs-800: 3rem;
   --fs-700: 3rem;
   --fs-600: 3rem;
   --fs-500: 2.5rem;
@@ -528,6 +528,27 @@ p {
     grid-column: 3/9;
   }
 }
+.nav.has-expanded .nav__menu {
+  height: auto;
+  z-index: -1;
+  padding-block: 2.4rem;
+}
+.nav.has-expanded .nav__list {
+  display: flex;
+}
+.nav.has-expanded .nav__hamburger {
+  background: none;
+}
+.nav.has-expanded .nav__hamburger::before {
+  top: 0.9rem;
+  transform: rotate(45deg);
+  transition-delay: 0s, 0.25s;
+}
+.nav.has-expanded .nav__hamburger::after {
+  bottom: 0.9rem;
+  transform: rotate(-45deg);
+  transition-delay: 0s, 0.25s;
+}
 .nav__menu {
   background-color: #172755;
   height: 0;
@@ -538,14 +559,6 @@ p {
   top: 7.2rem;
   transition: all 0.35s ease;
   width: 100%;
-}
-.nav__menu.has-expanded {
-  height: auto;
-  z-index: -1;
-  padding-block: 2.4rem;
-}
-.nav__menu.has-expanded .nav__list {
-  display: flex;
 }
 @media screen and (min-width: 62em) {
   .nav__menu {
@@ -613,11 +626,14 @@ p {
   }
 }
 .nav__toggler {
-  padding: 0;
+  align-items: center;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  justify-content: space-between;
+  height: 2rem;
+  justify-content: center;
+  padding: 0;
+  position: relative;
 }
 @media screen and (min-width: 62em) {
   .nav__toggler {
@@ -625,11 +641,32 @@ p {
   }
 }
 .nav__hamburger {
-  display: block;
-  width: 2.8rem;
-  height: 0.3rem;
-  background-color: #8794BA;
+  background: #8794BA;
   border-radius: 0.4rem;
+  display: block;
+  height: 0.2rem;
+  transition: background 0.25s;
+  width: 2.5rem;
+}
+.nav__hamburger::before, .nav__hamburger::after {
+  background: #8794BA;
+  content: "";
+  display: block;
+  height: 0.2rem;
+  left: 0;
+  position: absolute;
+  transform: rotate(0deg);
+  transition-delay: 0.25s, 0s;
+  transition-duration: 0.25s, 0.25s;
+  width: 100%;
+}
+.nav__hamburger::before {
+  top: 0.2rem;
+  transition-property: top, transform;
+}
+.nav__hamburger::after {
+  bottom: 0.2rem;
+  transition-property: bottom, transform;
 }
 
 .home-view {
