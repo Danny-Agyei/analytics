@@ -462,7 +462,7 @@ p {
   padding-block: 2rem;
   position: fixed;
   top: 0;
-  transition: all 0.25s ease-in-out;
+  transition: transform 0.1s ease-in-out;
   width: 100%;
   z-index: 999;
 }
@@ -470,6 +470,7 @@ p {
   .site-header {
     background: none;
     box-shadow: none;
+    transform: translateY(4rem);
   }
   .site-header--sticky {
     background-color: #172755;

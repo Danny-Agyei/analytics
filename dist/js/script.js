@@ -17,7 +17,11 @@ $(document).ready(function () {
 
         const amountScrolled = $(window)[0].pageYOffset;
 
+        siteHeader.addClass('site-header--reset')
+
         if (amountScrolled > 0) {
+
+            // siteHeader.removeClass('site-header--reset')
             siteHeader.addClass('site-header--sticky')
         } else {
             siteHeader.removeClass('site-header--sticky')
@@ -71,6 +75,12 @@ $(document).ready(function () {
 
     stickyHeader()
     initCarousel();
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "instant",
+    });
 
     $(window).resize(initCarousel);
     $(window).on('scroll', stickyHeader);
