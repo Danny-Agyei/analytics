@@ -2,7 +2,21 @@
 
 //home
 .home-view {
+    background-image: url('../../assets/images/hero-background-left.png'), url('../../assets/images/hero-background-right.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, -20rem 15rem;
+    background-size: 40rem, cover;
     position: relative;
+
+    @include mediaQuery(tablet) {
+        background-position: top left, 5rem 5rem;
+    }
+
+    @include mediaQuery(large) {
+        background-position: top left, 1% 10%;
+        background-size: 55rem, cover;
+    }
+
 
     &::after {
         background-color: $color-brand-secondary-dark;
@@ -10,7 +24,6 @@
         transform: skewY(172deg);
 
         @include mediaQuery(tablet-landscape) {
-            // transform: skewY(170deg);
             top: -15%;
         }
     }
@@ -82,7 +95,7 @@
         width: 100%;
 
         @include mediaQuery(tablet) {
-            transform: scale(1.35) translate($size-10x, $size-7x);
+            transform: scale(1.35) translate($size-10x, $size-7x) translateZ(0) !important;
         }
 
         @include mediaQuery(tablet-landscape) {
@@ -196,9 +209,9 @@
     }
 
     &__title {
-        margin-block-end: $size-3x;
-        font-weight: $fw-bold;
         color: $color-brand-secondary-dark;
+        font-weight: $fw-bold;
+        margin-block-end: $size-3x;
     }
 }
 
@@ -229,10 +242,10 @@
     }
 
     &__image {
-        width: 100%;
         border-radius: $radius-sm;
         box-shadow: $card-shadow;
         margin-block-start: $size-8x;
+        width: 100%;
 
         @include mediaQuery(large) {
             margin-block-start: 0;
@@ -243,18 +256,18 @@
 // Pricing
 .pricing {
     @include mediaQuery(tablet-landscape) {
-        max-width: var(--container-width);
         margin-inline: auto;
+        max-width: var(--container-width);
     }
 
     border-bottom: 0.1rem solid $color-brand-secondary-lighter;
-    padding-block:$size-15x $size-12x;
     margin-block-start: $size-13x;
+    padding-block:$size-15x $size-12x;
 
     @include mediaQuery(tablet) {
-        text-align: center;
-        padding-block: $size-10x $size-18x;
         margin-block-start: $size-35x;
+        padding-block: $size-10x $size-18x;
+        text-align: center;
     }
 
     @include mediaQuery(large) {
@@ -289,8 +302,8 @@
     &__list {
         @include mediaQuery(tablet-landscape) {
             display: flex;
-            justify-content: center;
             gap: $size-15x;
+            justify-content: center;
         }
     }
 
@@ -373,47 +386,5 @@
 
     &__btn {
         margin-block-start: $size-7x;
-    }
-}
-
-// Footer
-.footer {
-    padding-block-start: $size-12x;
-
-    &-view {
-        position: relative;
-
-        &::after {
-            background-color: $color-brand-secondary-dark;
-            border-top: $size-3x solid $color-brand-primary;
-            transform: skewY(172deg);
-            transform-origin: bottom left;
-        }
-
-        &::before {
-            background-color: $color-brand-secondary-dark;
-            bottom: -5%;
-            top: unset;
-        }
-    }
-
-    @include mediaQuery(large) {
-        padding-block-start: $size-15x;
-    }
-
-    &__container {
-        justify-content: space-between;
-    }
-
-    &__social {
-        gap: $size-6x;
-    }
-
-    &__icon {
-        width: $size-6x;
-
-        &--facebook {
-            width: $size-3x;
-        }
     }
 }

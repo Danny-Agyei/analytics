@@ -7,9 +7,9 @@
   padding-block: $size-5x;
   position: fixed;
   top: 0;
+  transition: transform 0.25s ease;
   width: 100%;
   z-index: 999;
-  transition: transform 0.25s ease;
 
 
   @include mediaQuery(tablet-landscape) {
@@ -41,7 +41,11 @@
     }
 
     &-logo {
-      width: 17rem;
+      width: $size-35x;
+
+      @include mediaQuery(tablet-landscape) {
+        width: $size-40x;
+      }
     }
   }
 
@@ -58,8 +62,8 @@
 
     @include mediaQuery(tablet-landscape) {
       display: inline-block;
-      padding-inline: $size-12x;
       margin-inline-start: $size-8x;
+      padding-inline: $size-12x;
     }
   }
 }
@@ -69,9 +73,9 @@
   width: max-content;
 
   @include mediaQuery(tablet-landscape) {
-    width: 100%;
-    grid-column: 3/9;
     align-self: center;
+    grid-column: 3/9;
+    width: 100%;
   }
 
   @include mediaQuery(desktop) {
@@ -81,8 +85,8 @@
   &.has-expanded {
     .nav__menu {
       height: auto;
-      z-index: -1;
       padding-block: $size-6x;
+      z-index: -1;
     }
 
     .nav__list {
@@ -113,16 +117,16 @@
     overflow: hidden;
     padding-inline: $size-5x;
     position: fixed;
-    top: $size-18x;
+    top: calc($size-18x - 0.2rem);
     transition: all 0.35s ease;
     width: 100%;
 
     @include mediaQuery(tablet-landscape) {
       background-color: transparent;
       height: auto;
-      visibility: visible;
-      position: static;
       padding: 0;
+      position: static;
+      visibility: visible;
     }
   }
 
@@ -134,9 +138,9 @@
     row-gap: $size-6x;
 
     @include mediaQuery(tablet-landscape) {
+      column-gap: $size-6x;
       display: flex;
       flex-direction: row;
-      column-gap: $size-6x;
     }
 
     @include mediaQuery(desktop) {
@@ -149,8 +153,8 @@
       width: 100%;
 
       @include mediaQuery(tablet-landscape) {
-        padding-block-end: 0;
         border: none;
+        padding-block-end: 0;
         width: auto;
       }
 
@@ -162,6 +166,7 @@
   }
 
   &__link {
+    font-weight: 500;
     transition: color 0.3s ease-in-out;
 
     @include mediaQuery(tablet-landscape) {

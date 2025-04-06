@@ -1,0 +1,58 @@
+@use '../abstracts' as *;
+
+
+// Footer
+.footer {
+    padding-block: $size-15x $size-13x;
+
+    &-view {
+        padding-block-end: $size-10x;
+
+        &__wrapper {
+            background-color: $color-brand-secondary-dark;
+            background-image: url('../../assets/images/footer-background.png');
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: cover;
+            position: relative;
+
+            @include mediaQuery(large) {
+                background-size: contain;
+            }
+
+
+            &::after {
+                background-color: $color-brand-secondary-dark;
+                border-top: $size-3x solid $color-brand-primary;
+                top: -$size-5x;
+                transform: skewY(172deg);
+                transform-origin: bottom left;
+            }
+
+            &::before {
+                display: none;
+            }
+        }
+
+    }
+
+    @include mediaQuery(large) {
+        padding-block-start: $size-15x;
+    }
+
+    &__container {
+        justify-content: space-between;
+    }
+
+    &__social {
+        gap: $size-6x;
+    }
+
+    &__icon {
+        width: $size-6x;
+
+        &--facebook {
+            width: $size-3x;
+        }
+    }
+}

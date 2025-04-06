@@ -205,7 +205,6 @@ html:focus-within {
 a,
 a:active {
   text-decoration: none;
-  color: inherit;
 }
 
 body {
@@ -315,8 +314,8 @@ p {
 }
 
 .u-flex-group {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .u-flow > :first-child {
@@ -459,9 +458,9 @@ p {
   padding-block: 2rem;
   position: fixed;
   top: 0;
+  transition: transform 0.25s ease;
   width: 100%;
   z-index: 999;
-  transition: transform 0.25s ease;
 }
 @media screen and (min-width: 62em) {
   .site-header {
@@ -493,7 +492,12 @@ p {
   }
 }
 .site-header__brand-logo {
-  width: 17rem;
+  width: 14rem;
+}
+@media screen and (min-width: 62em) {
+  .site-header__brand-logo {
+    width: 16rem;
+  }
 }
 @media screen and (min-width: 62em) {
   .site-header__account {
@@ -507,8 +511,8 @@ p {
 @media screen and (min-width: 62em) {
   .site-header__btn--signup {
     display: inline-block;
-    padding-inline: 4.8rem;
     margin-inline-start: 3.2rem;
+    padding-inline: 4.8rem;
   }
 }
 
@@ -518,9 +522,9 @@ p {
 }
 @media screen and (min-width: 62em) {
   .nav {
-    width: 100%;
-    grid-column: 3/9;
     align-self: center;
+    grid-column: 3/9;
+    width: 100%;
   }
 }
 @media screen and (min-width: 73.4375em) {
@@ -530,8 +534,8 @@ p {
 }
 .nav.has-expanded .nav__menu {
   height: auto;
-  z-index: -1;
   padding-block: 2.4rem;
+  z-index: -1;
 }
 .nav.has-expanded .nav__list {
   display: flex;
@@ -556,7 +560,7 @@ p {
   overflow: hidden;
   padding-inline: 2rem;
   position: fixed;
-  top: 7.2rem;
+  top: 7rem;
   transition: all 0.35s ease;
   width: 100%;
 }
@@ -564,9 +568,9 @@ p {
   .nav__menu {
     background-color: transparent;
     height: auto;
-    visibility: visible;
-    position: static;
     padding: 0;
+    position: static;
+    visibility: visible;
   }
 }
 .nav__list {
@@ -578,9 +582,9 @@ p {
 }
 @media screen and (min-width: 62em) {
   .nav__list {
+    column-gap: 2.4rem;
     display: flex;
     flex-direction: row;
-    column-gap: 2.4rem;
   }
 }
 @media screen and (min-width: 73.4375em) {
@@ -595,8 +599,8 @@ p {
 }
 @media screen and (min-width: 62em) {
   .nav__list > :where(:not(:last-child)) {
-    padding-block-end: 0;
     border: none;
+    padding-block-end: 0;
     width: auto;
   }
 }
@@ -606,6 +610,7 @@ p {
   }
 }
 .nav__link {
+  font-weight: 500;
   transition: color 0.3s ease-in-out;
 }
 @media screen and (min-width: 62em) {
@@ -670,7 +675,22 @@ p {
 }
 
 .home-view {
+  background-image: url("../../assets/images/hero-background-left.png"), url("../../assets/images/hero-background-right.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, -20rem 15rem;
+  background-size: 40rem, cover;
   position: relative;
+}
+@media screen and (min-width: 48em) {
+  .home-view {
+    background-position: top left, 5rem 5rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .home-view {
+    background-position: top left, 1% 10%;
+    background-size: 55rem, cover;
+  }
 }
 .home-view::after {
   background-color: #172755;
@@ -757,7 +777,7 @@ p {
 }
 @media screen and (min-width: 48em) {
   .hero__image {
-    transform: scale(1.35) translate(4rem, 2.8rem);
+    transform: scale(1.35) translate(4rem, 2.8rem) translateZ(0) !important;
   }
 }
 @media screen and (min-width: 62em) {
@@ -870,9 +890,9 @@ p {
   width: 6rem;
 }
 .features__title {
-  margin-block-end: 1.2rem;
-  font-weight: 700;
   color: #172755;
+  font-weight: 700;
+  margin-block-end: 1.2rem;
 }
 
 @media screen and (min-width: 75em) {
@@ -897,10 +917,10 @@ p {
   }
 }
 .why-us__image {
-  width: 100%;
   border-radius: 1.6rem;
   box-shadow: 0px 10.05px 27.9167px -8.375px rgba(25, 42, 89, 0.2);
   margin-block-start: 3.2rem;
+  width: 100%;
 }
 @media screen and (min-width: 75em) {
   .why-us__image {
@@ -910,20 +930,20 @@ p {
 
 .pricing {
   border-bottom: 0.1rem solid #2A407C;
-  padding-block: 6rem 4.8rem;
   margin-block-start: 5.2rem;
+  padding-block: 6rem 4.8rem;
 }
 @media screen and (min-width: 62em) {
   .pricing {
-    max-width: var(--container-width);
     margin-inline: auto;
+    max-width: var(--container-width);
   }
 }
 @media screen and (min-width: 48em) {
   .pricing {
-    text-align: center;
-    padding-block: 4rem 7.2rem;
     margin-block-start: 14rem;
+    padding-block: 4rem 7.2rem;
+    text-align: center;
   }
 }
 @media screen and (min-width: 75em) {
@@ -961,8 +981,8 @@ p {
 @media screen and (min-width: 62em) {
   .pricing__list {
     display: flex;
-    justify-content: center;
     gap: 6rem;
+    justify-content: center;
   }
 }
 .pricing__plan {
@@ -1038,21 +1058,33 @@ p {
 }
 
 .footer {
-  padding-block-start: 4.8rem;
+  padding-block: 6rem 5.2rem;
 }
 .footer-view {
+  padding-block-end: 4rem;
+}
+.footer-view__wrapper {
+  background-color: #172755;
+  background-image: url("../../assets/images/footer-background.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
   position: relative;
 }
-.footer-view::after {
+@media screen and (min-width: 75em) {
+  .footer-view__wrapper {
+    background-size: contain;
+  }
+}
+.footer-view__wrapper::after {
   background-color: #172755;
   border-top: 1.2rem solid #EF2A82;
+  top: -2rem;
   transform: skewY(172deg);
   transform-origin: bottom left;
 }
-.footer-view::before {
-  background-color: #172755;
-  bottom: -5%;
-  top: unset;
+.footer-view__wrapper::before {
+  display: none;
 }
 @media screen and (min-width: 75em) {
   .footer {
