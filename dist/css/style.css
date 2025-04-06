@@ -202,6 +202,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+a {
+  color: inherit;
+}
+
 a,
 a:active {
   text-decoration: none;
