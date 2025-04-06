@@ -7,16 +7,18 @@
   padding-block: $size-5x;
   position: fixed;
   top: 0;
-  transition: transform 0.25s ease;
+  transition: all 0.25s ease-in-out;
   width: 100%;
   z-index: 999;
 
 
   @include mediaQuery(tablet-landscape) {
+    background: none;
     box-shadow: none;
-    transform: translateY($size-10x);
+    // transform: translateY($size-10x);
 
     &--sticky {
+      background-color: $color-brand-secondary-dark;
       transform: translateY(0);
     }
   }

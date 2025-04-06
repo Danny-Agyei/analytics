@@ -462,16 +462,17 @@ p {
   padding-block: 2rem;
   position: fixed;
   top: 0;
-  transition: transform 0.25s ease;
+  transition: all 0.25s ease-in-out;
   width: 100%;
   z-index: 999;
 }
 @media screen and (min-width: 62em) {
   .site-header {
+    background: none;
     box-shadow: none;
-    transform: translateY(4rem);
   }
   .site-header--sticky {
+    background-color: #172755;
     transform: translateY(0);
   }
 }
@@ -679,27 +680,35 @@ p {
 }
 
 .home-view {
-  background-image: url("../../assets/images/hero-background-left.png"), url("../../assets/images/hero-background-right.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: top left, -20rem 15rem;
-  background-size: 40rem, cover;
+  background-image: url("../../assets/images/hero-background-left.png");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 40rem;
   position: relative;
-}
-@media screen and (min-width: 48em) {
-  .home-view {
-    background-position: top left, 5rem 5rem;
-  }
 }
 @media screen and (min-width: 75em) {
   .home-view {
-    background-position: top left, 1% 10%;
-    background-size: 55rem, cover;
+    background-size: 55rem;
   }
 }
 .home-view::after {
+  background-image: url("../../assets/images/hero-background-right.png");
+  background-repeat: no-repeat;
+  background-position: -20rem 15rem;
+  background-size: cover;
   background-color: #172755;
   border-bottom: 1.2rem solid #EF2A82;
   transform: skewY(172deg);
+}
+@media screen and (min-width: 48em) {
+  .home-view::after {
+    background-position: 5rem 10rem;
+  }
+}
+@media screen and (min-width: 75em) {
+  .home-view::after {
+    background-position: -5rem 12rem;
+  }
 }
 @media screen and (min-width: 62em) {
   .home-view::after {
@@ -712,12 +721,10 @@ p {
   }
 }
 
-.hero {
-  z-index: 5;
-}
 @media screen and (min-width: 62em) {
   .hero {
     position: relative;
+    z-index: 5;
   }
 }
 .hero__wrapper {
@@ -779,7 +786,7 @@ p {
   border-radius: 1.6rem;
   width: 100%;
 }
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 48em) and (max-width: 62em) {
   .hero__image {
     transform: scale(1.35) translate(4rem, 2.8rem) translateZ(0) !important;
   }

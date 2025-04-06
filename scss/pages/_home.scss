@@ -2,23 +2,33 @@
 
 //home
 .home-view {
-    background-image: url('../../assets/images/hero-background-left.png'), url('../../assets/images/hero-background-right.png');
-    background-repeat: no-repeat, no-repeat;
-    background-position: top left, -20rem 15rem;
-    background-size: 40rem, cover;
+    background-image: url('../../assets/images/hero-background-left.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 40rem;
     position: relative;
 
-    @include mediaQuery(tablet) {
-        background-position: top left, 5rem 5rem;
-    }
-
     @include mediaQuery(large) {
-        background-position: top left, 1% 10%;
-        background-size: 55rem, cover;
+        background-size: 55rem;
     }
 
 
     &::after {
+        background-image: url('../../assets/images/hero-background-right.png');
+        background-repeat: no-repeat;
+        background-position: -20rem 15rem;
+        background-size: cover;
+
+        @include mediaQuery(tablet) {
+            background-position: 5rem 10rem;
+        }
+
+        @include mediaQuery(large) {
+            background-position: -5rem 12rem;
+        }
+
+
+
         background-color: $color-brand-secondary-dark;
         border-bottom: $size-3x solid $color-brand-primary;
         transform: skewY(172deg);
@@ -35,11 +45,12 @@
 
 // Hero
 .hero {
-    z-index: 5;
 
     @include mediaQuery(tablet-landscape) {
         position: relative;
+        z-index: 5;
     }
+
 
     &__wrapper {
         display: grid;
@@ -94,7 +105,7 @@
         border-radius: $radius-sm;
         width: 100%;
 
-        @include mediaQuery(tablet) {
+        @media screen and (min-width:48em) and (max-width: 62em) {
             transform: scale(1.35) translate($size-10x, $size-7x) translateZ(0) !important;
         }
 
