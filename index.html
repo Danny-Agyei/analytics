@@ -76,7 +76,10 @@
 
             <nav class="nav" id="nav-main" aria-label="Main">
               <div class="nav__menu u-text-center" id="js-nav-menu">
-                <ul class="nav__list u-flex-group" aria-label="Primary">
+                <ul
+                  class="nav__list u-flex-group is-hidden"
+                  aria-label="Primary"
+                >
                   <li><a href="#products" class="nav__link">Products</a></li>
                   <li><a href="#pricing" class="nav__link">Pricing</a></li>
                   <li><a href="#faq" class="nav__link">FAQ</a></li>
@@ -389,7 +392,7 @@
         </div>
       </section>
 
-      <div class="u-wrapper foooter-view">
+      <div class="u-wrapper footer-view">
         <div class="l-container-full footer-view__wrapper">
           <!-- Pricing -->
           <section class="pricing">
@@ -398,6 +401,7 @@
                 class="pricing__heading u-heading-secondary"
                 data-aos="fade-up"
                 data-aos-duration="800"
+                data-aos-offset="20"
               >
                 Pricing Plans
               </h2>
@@ -406,8 +410,7 @@
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="20"
-                data-aos-offset=""
-                ="200"
+                data-aos-offset="20"
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Elementum nisi aliquet volutpat pellentesque volutpat est.
@@ -419,8 +422,7 @@
               data-aos="fade-up"
               data-aos-duration="1000"
               data-aos-delay="20"
-              data-aos-offset=""
-              ="220"
+              data-aos-offset="50"
             >
               <div
                 class="item pricing__plan pricing__plan--starter u-flex-group"
@@ -566,7 +568,7 @@
         delay: 0, // values from 0 to 3000, with step 50ms
         duration: 800, // values from 0 to 3000, with step 50ms
         easing: "ease-in-out", // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
+        once: true, // whether animation should happen only once - while scrolling down
         mirror: false, // whether elements should animate out while scrolling past them
         anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
       });

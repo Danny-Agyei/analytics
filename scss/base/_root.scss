@@ -2,7 +2,7 @@
 @use "../abstracts/mixin" as *;
 
 :root {
-  // Container 
+  // Container
   --container-width: calc(100% - 4rem);
 
   @include mediaQuery(mobile) {
@@ -18,17 +18,18 @@
   }
 
   @include mediaQuery(desktop) {
-    --container-width: 110.0rem;
+    --container-width: 110rem;
   }
 
   @include mediaQuery(large) {
-    --container-width: 118.0rem;
+    --container-width: 118rem;
   }
-
 
   // Font sizes
   @each $size-key, $size-value in $font-sizes-map {
-    --fs-#{$size-key}: #{$size-value};
+    & {
+      --fs-#{$size-key}: #{$size-value};
+    }
 
     @include mediaQuery(tablet-landscape) {
       --fs-800: 4.1rem;

@@ -3,11 +3,19 @@ $(document).ready(function () {
 
     function navMenuToggler() {
         const nav = $("#nav-main");
-        const navMenu = $("#js-nav-menu");
         const hasExpanded = nav.hasClass("has-expanded");
 
         nav.toggleClass("has-expanded", !hasExpanded);
         btnNavMenuTrigger.attr("aria-expanded", !hasExpanded);
+
+        if (nav.hasClass('has-expanded')) {
+            $('.nav__list').removeClass('is-hidden');
+        }
+        else {
+            setTimeout(() => {
+                $('.nav__list').addClass('is-hidden');
+            }, 500);
+        }
     }
 
     btnNavMenuTrigger.on("click", navMenuToggler);
@@ -17,15 +25,8 @@ $(document).ready(function () {
 
         const amountScrolled = $(window)[0].pageYOffset;
 
-        siteHeader.addClass('site-header--reset')
+        siteHeader.toggleClass('site-header--sticky', amountScrolled > 0);
 
-        if (amountScrolled > 0) {
-
-            // siteHeader.removeClass('site-header--reset')
-            siteHeader.addClass('site-header--sticky')
-        } else {
-            siteHeader.removeClass('site-header--sticky')
-        }
     }
 
 

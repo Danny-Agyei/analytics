@@ -11,7 +11,6 @@
   width: 100%;
   z-index: 999;
 
-
   @include mediaQuery(tablet-landscape) {
     background: none;
     box-shadow: none;
@@ -21,7 +20,6 @@
       background-color: $color-brand-secondary-dark;
       transform: translateY(0);
     }
-
   }
 
   &__container {
@@ -57,7 +55,6 @@
       grid-column: 9 /-1;
       justify-self: end;
     }
-
   }
 
   &__btn--signup {
@@ -87,13 +84,9 @@
 
   &.has-expanded {
     .nav__menu {
-      height: auto;
+      height: 42.5rem;
       padding-block: $size-6x;
       z-index: -1;
-    }
-
-    .nav__list {
-      display: flex;
     }
 
     .nav__hamburger {
@@ -134,15 +127,21 @@
   }
 
   &__list {
-    display: none;
     font-size: $fs-lead;
     font-weight: $fw-bold;
     flex-direction: column;
     row-gap: $size-6x;
 
+    &.is-hidden {
+      display: none;
+
+      @include mediaQuery(tablet-landscape) {
+        display: flex;
+      }
+    }
+
     @include mediaQuery(tablet-landscape) {
       column-gap: $size-6x;
-      display: flex;
       flex-direction: row;
     }
 
@@ -150,7 +149,7 @@
       column-gap: $size-10x;
     }
 
-    &> :where(:not(:last-child)) {
+    & > :where(:not(:last-child)) {
       border-bottom: 0.1rem solid $color-brand-secondary-light;
       padding-block-end: $size-6x;
       width: 100%;
@@ -160,7 +159,6 @@
         padding-block-end: 0;
         width: auto;
       }
-
     }
 
     @include mediaQuery(tablet-landscape) {
@@ -200,7 +198,6 @@
     padding: 0;
     position: relative;
 
-
     @include mediaQuery(tablet-landscape) {
       display: none;
     }
@@ -217,7 +214,7 @@
     &::before,
     &::after {
       background: $color-brand-secondary-light;
-      content: '';
+      content: "";
       display: block;
       height: 0.2rem;
       left: 0;
