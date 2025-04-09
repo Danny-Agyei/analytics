@@ -12,8 +12,10 @@
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
   "browserslist": [
-    "last 40 versions"
-  ],
+  "last 38 versions", 
+  "not dead",
+  "> 1%"
+],
   "keywords": [],
   "author": "",
   "license": "ISC",
